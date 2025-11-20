@@ -1,23 +1,23 @@
 # 🔴 PokéLang - Documentação Oficial
 
 **Disciplina:** Paradigmas de Linguagens de Programação
-[cite_start]**Projeto:** Criação de Linguagem Esotérica [cite: 5]
-[cite_start]**Extensão de Arquivo:** `.poke` [cite: 8]
-[cite_start]**Linguagem Alvo:** Python 3 [cite: 8]
+**Projeto:** Criação de Linguagem Esotérica
+**Extensão de Arquivo:** `.poke`
+**Linguagem Alvo:** Python 3
 
 ---
 
 ## 1. Introdução
 
-[cite_start]A **PokéLang** é uma linguagem de programação esotérica de propósito geral, temática no universo da franquia Pokémon[cite: 5]. O objetivo da linguagem é transformar a lógica de programação árida em uma narrativa de batalha ou em letras de música.
+A **PokéLang** é uma linguagem de programação esotérica de propósito geral, temática no universo da franquia Pokémon. O objetivo da linguagem é transformar a lógica de programação árida em uma narrativa de batalha ou em letras de música.
 
-[cite_start]O código fonte é escrito em arquivos com extensão `.poke`, que são processados por um tradutor (transpilador) desenvolvido em Python, gerando código executável nativo[cite: 9, 14].
+O código fonte é escrito em arquivos com extensão `.poke`, que são processados por um tradutor (transpilador) desenvolvido em Python, gerando código executável nativo
 
 ---
 
 ## 2. Estrutura do Programa
 
-Todo programa em PokéLang simula um encontro com um Pokémon selvagem. [cite_start]O código deve estar contido dentro deste bloco de abertura e fechamento[cite: 1, 3]:
+Todo programa em PokéLang simula um encontro com um Pokémon selvagem. O código deve estar contido dentro deste bloco de abertura e fechamento:
 
 ```text
 Um pokémon selvagem apareceu
@@ -27,11 +27,11 @@ O pokémon selvagem desmaiou
 
 -----
 
-## [cite\_start]3. Guia de Sintaxe e Comandos [cite: 6]
+## 3. Guia de Sintaxe e Comandos
 
 ### 3.1. Saída de Dados (Print)
 
-[cite\_start]Para exibir informações na tela, o Pokémon utiliza o comando de "cantar"[cite: 1, 3].
+Para exibir informações na tela, o Pokémon utiliza o comando de "cantar".
 
   * **Sintaxe:** `(NomeDoPokemon) Use cantar "Texto"`
   * **Exemplo:**
@@ -58,14 +58,14 @@ Variáveis são tratadas como atributos do Pokémon (Vida) ou características.
 
 ### 3.3. Entrada de Dados (Input)
 
-[cite\_start]Para ler dados do usuário, utiliza-se a habilidade "detectar"[cite: 2].
+Para ler dados do usuário, utiliza-se a habilidade "detectar".
 
   * **Sintaxe:** `(Variavel) Use detectar`
   * **Exemplo:** `(Escolha) Use detectar`
 
 ### 3.4. Estruturas de Controle (Condicionais)
 
-[cite\_start]O fluxo é controlado como uma escolha de movimentos em um turno de batalha[cite: 1].
+O fluxo é controlado como uma escolha de movimentos em um turno de batalha.
 
   * **Sintaxe (IF):**
 
@@ -99,7 +99,7 @@ Simula o uso de um item de batalha ("Faixa").
 ```
 
 **B. Modo Música (Loop Decrescente Especial):**
-[cite\_start]Uma estrutura poética exclusiva para iterar contadores decrescentes (inspirado na música "99 Bottles of Beer")[cite: 40].
+Uma estrutura poética exclusiva para iterar contadores decrescentes (inspirado na música "99 Bottles of Beer").
 
   * **Sintaxe:**
 
@@ -113,7 +113,7 @@ Simula o uso de um item de batalha ("Faixa").
 
 ### 3.6. Funções (Evolução)
 
-[cite\_start]Funções são declaradas como evoluções e chamadas como habilidades[cite: 1].
+Funções são declaradas como evoluções e chamadas como habilidades.
 
   * **Declaração:**
 
@@ -135,24 +135,24 @@ Simula o uso de um item de batalha ("Faixa").
 
 -----
 
-## [cite\_start]4. Implementação Técnica (O Tradutor) [cite: 13]
+## 4. Implementação Técnica (O Tradutor) 
 
-O tradutor da PokéLang foi desenvolvido em **Python**. [cite\_start]Ele funciona como um **Transpilador (Source-to-Source Compiler)**[cite: 9].
+O tradutor da PokéLang foi desenvolvido em **Python**. Ele funciona como um **Transpilador (Source-to-Source Compiler)**.
 
 ### Arquitetura
 
 O sistema é composto por dois arquivos principais:
 
 1.  **`pokelang.py` (O Motor):** Contém um dicionário de regras baseadas em **Expressões Regulares (Regex)**. Ele lê o arquivo `.poke` linha por linha, identifica padrões (como `Use cantar`) e substitui pela sintaxe Python correspondente (`print()`). Ele também gerencia a indentação automática para blocos de código.
-2.  **`pokego.py` (O Executor):** É o script principal. [cite\_start]Utiliza a biblioteca nativa `sys` para ler o arquivo de entrada e `subprocess` para executar o código Python traduzido automaticamente, garantindo uma experiência fluida para o usuário[cite: 21].
+2.  **`pokego.py` (O Executor):** É o script principal. Utiliza a biblioteca nativa `sys` para ler o arquivo de entrada e `subprocess` para executar o código Python traduzido automaticamente, garantindo uma experiência fluida para o usuário.
 
 -----
 
-## [cite\_start]5. Códigos Exemplo [cite: 15]
+## 5. Códigos Exemplo 
 
 Abaixo estão os três programas obrigatórios escritos em PokéLang.
 
-### 5.1. [cite\_start]Hello World (`ola_mundo.poke`) [cite: 16, 3]
+### 5.1. Hello World (`ola_mundo.poke`) 
 
 ```text
 Um pokémon selvagem apareceu
@@ -160,7 +160,7 @@ Um pokémon selvagem apareceu
 O pokémon selvagem desmaiou
 ```
 
-### 5.2. [cite\_start]99 Garrafas (`99-garrafas.poke`) [cite: 17, 40]
+### 5.2. 99 Garrafas (`99-garrafas.poke`) 
 
 Demonstra o "Modo Música" (Loop especializado).
 
@@ -178,7 +178,7 @@ Nenhuma (Garrafas) na mochila, hora de ir pra casa...
 O pokémon selvagem desmaiou
 ```
 
-### 5.3. [cite\_start]Programa Livre: Quiz Interativo (`quiz.poke`) [cite: 20, 1]
+### 5.3. Programa Livre: Quiz Interativo (`quiz.poke`) 
 
 Demonstra uso de Input, Condicionais, Variáveis e Funções.
 
@@ -213,7 +213,7 @@ O pokémon selvagem desmaiou
 
 -----
 
-## [cite\_start]6. Como Executar [cite: 21]
+## 6. Como Executar 
 
 Para rodar os programas, é necessário ter o Python 3 instalado.
 
