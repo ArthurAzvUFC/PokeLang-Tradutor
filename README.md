@@ -1,4 +1,3 @@
-````markdown
 # 🔴 PokéLang - Documentação Oficial
 
 **Disciplina:** Paradigmas de Linguagens de Programação
@@ -230,5 +229,4 @@ python pokego.py 99-garrafas.poke
 
 *(O script irá traduzir o código, executar o programa e limpar os arquivos temporários automaticamente).*
 
-```
 ```
