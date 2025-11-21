@@ -228,5 +228,3 @@ python pokego.py 99-garrafas.poke
 ```
 
 *(O script irá traduzir o código, executar o programa e limpar os arquivos temporários automaticamente).*
-
-```
