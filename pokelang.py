@@ -107,10 +107,32 @@ def converter_arquivo(arquivo_entrada):
     arquivo_saida = arquivo_entrada.rsplit('.', 1)[0] + ".py"
     linhas_py = []
     indent = 0
+    lendo = False  # só traduz entre as frases-chave
     try:
         with open(arquivo_entrada, 'r', encoding='utf-8') as f:
             for linha in f:
-                codigo, mudanca = traduzir_linha(linha)
+                linha_limpa = linha.strip()
+
+                 # → Ativa leitura
+                if re.match(r"Um pokémon selvagem apareceu", linha_limpa, re.IGNORECASE):
+                    lendo = True
+                    codigo, mudanca = traduzir_linha(linha_limpa)
+                # → Desativa leitura e para
+                elif re.match(r"O pokémon selvagem desmaiou", linha_limpa, re.IGNORECASE):
+                    codigo, mudanca = traduzir_linha(linha_limpa)
+                    if codigo:
+                        espacos = "    " * indent
+                        linhas_py.append(espacos + codigo)
+                    break  # encerra totalmente
+                else:
+                    # Se ainda não encontrou o início → ignora completamente
+                    if not lendo:
+                        continue
+                    # Se já passou do fim → ignora também
+                    # (não ocorre pois damos break, mas mantenho por segurança)
+                    codigo, mudanca = traduzir_linha(linha_limpa)
+
+                # Controle de indentação
                 if mudanca < 0: indent += mudanca
                 if indent < 0: indent = 0
                 if codigo:

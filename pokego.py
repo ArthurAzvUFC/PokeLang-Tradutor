@@ -40,9 +40,13 @@ def main():
     print("--------------------------------")
 
     # 4. LIMPEZA
-    # Remove o arquivo .py gerado para deixar a pasta limpa
-    if os.path.exists(arquivo_py):
-        os.remove(arquivo_py)
+    # Se o usuário digitou "debug" no comando, a gente NÃO apaga
+    if "debug" in sys.argv:
+        print(f"--> MODO DEBUG: Arquivo '{arquivo_py}' mantido.")
+    else:
+        # Se não tem "debug", apaga normalmente
+        if os.path.exists(arquivo_py):
+            os.remove(arquivo_py)
 
 if __name__ == "__main__":
     main()
