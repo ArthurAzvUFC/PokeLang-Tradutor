@@ -107,7 +107,7 @@ def converter_arquivo(arquivo_entrada):
     arquivo_saida = arquivo_entrada.rsplit('.', 1)[0] + ".py"
     linhas_py = []
     indent = 0
-    lendo = False  # só traduz entre as frases-chave
+    lendo = False
     try:
         with open(arquivo_entrada, 'r', encoding='utf-8') as f:
             for linha in f:
@@ -123,13 +123,12 @@ def converter_arquivo(arquivo_entrada):
                     if codigo:
                         espacos = "    " * indent
                         linhas_py.append(espacos + codigo)
-                    break  # encerra totalmente
+                    break
                 else:
-                    # Se ainda não encontrou o início → ignora completamente
+
                     if not lendo:
                         continue
-                    # Se já passou do fim → ignora também
-                    # (não ocorre pois damos break, mas mantenho por segurança)
+
                     codigo, mudanca = traduzir_linha(linha_limpa)
 
                 # Controle de indentação

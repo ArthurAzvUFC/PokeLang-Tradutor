@@ -40,11 +40,9 @@ def main():
     print("--------------------------------")
 
     # 4. LIMPEZA
-    # Se o usuário digitou "debug" no comando, a gente NÃO apaga
     if "debug" in sys.argv:
         print(f"--> MODO DEBUG: Arquivo '{arquivo_py}' mantido.")
     else:
-        # Se não tem "debug", apaga normalmente
         if os.path.exists(arquivo_py):
             os.remove(arquivo_py)
 
