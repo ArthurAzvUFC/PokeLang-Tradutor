@@ -1,96 +1,78 @@
-# 🔴 PokéLang - Documentação Oficial
+# 🔴 PokéLang - Documentação Oficial (Cinnabar Edition)
 
 **Disciplina:** Paradigmas de Linguagens de Programação
 **Projeto:** Criação de Linguagem Esotérica
 **Extensão de Arquivo:** `.poke`
 **Linguagem Alvo:** Python 3
+**Equipe:**
+
+- ANNA ALICYA MAGALHAES CRUZ - 568323
+- ANTONIO KILDERE SOUSA MENEZES - 567258
+- DANIEL NECO SILVA - 568270
+- HEVELLYN MEIRIANE NASCIMENTO DE MESQUITA - 565892
+- JOSE ARTHUR GOMES AZEVEDO - 567419
+- TAYNARA DE ARAUJO ALVES - 565040
 
 ---
 
 ## 1. Introdução
 
-A **PokéLang** é uma linguagem de programação esotérica de propósito geral, temática no universo da franquia Pokémon. O objetivo da linguagem é transformar a lógica de programação árida em uma narrativa de batalha ou em letras de música.
+A **PokéLang** é uma **Linguagem Esotérica de Horror Cósmico**, simulando um _Memory Dump_ corrompido da infame **Ilha Cinnabar** (local dos glitches originais de Pokémon Red/Blue).
 
-O código fonte é escrito em arquivos com extensão `.poke`, que são processados por um tradutor (transpilador) desenvolvido em Python, gerando código executável nativo
+O objetivo da linguagem é proporcionar uma experiência de programação imersiva e instável. O código fonte (`.poke`) é processado por um tradutor que injeta uma "Engine de Corrupção", resultando em saídas de texto com efeito de máquina de escrever, caracteres "sujos" (Zalgo text), sons de sistema e erros fatais temáticos (Bad Egg).
 
 ---
 
 ## 2. Estrutura do Programa
 
-Todo programa em PokéLang simula um encontro com um Pokémon selvagem. O código deve estar contido dentro deste bloco de abertura e fechamento:
+Todo programa em PokéLang simula a leitura de um encontro selvagem na memória do jogo. O código deve estar contido dentro deste bloco:
 
 ```text
 Um pokémon selvagem apareceu
     ... (Seu código aqui) ...
 O pokémon selvagem desmaiou
-````
-
------
-
-## 3. Guia de Sintaxe e Comandos
-
-### 3.1. Saída de Dados (Print)
-
-Para exibir informações na tela, o Pokémon utiliza o comando de "cantar".
-
-  * **Sintaxe:** `(NomeDoPokemon) Use cantar "Texto"`
-  * **Exemplo:**
-
-<!-- end list -->
-
-```text
-(Pikachu) Use cantar "Olá Mundo!"
 ```
+
+---
+
+## 3\. Guia de Sintaxe e Comandos
+
+### 3.1. Saída de Dados (Print / Void Echo)
+
+Exibe informações na tela com efeito de digitação lenta (lag) e chance de corrupção visual.
+
+- **Sintaxe:** `(Nome) Use cantar "Texto"`
+- **Exemplo:**
+  ```text
+  (MissingNo) Use cantar "A realidade está falhando..."
+  ```
 
 ### 3.2. Declaração de Variáveis
 
-Variáveis são tratadas como atributos do Pokémon (Vida) ou características.
+Variáveis são tratadas como atributos de vida ou dados na memória.
 
-  * **Atribuição Numérica:**
+- **Sintaxe:** `(Variavel) tem [Valor] de vida`
+- **Exemplo:** `(HP) tem 128 de vida`
 
-      * **Sintaxe:** `(Variavel) tem [Valor] de vida`
-      * **Exemplo:** `(HP) tem 100 de vida` (Equivale a `hp = 100`)
+### 3.3. Entrada de Dados (Input / Void Inject)
 
-  * **Atribuição de Texto/Genérica:**
+Lê dados do usuário com um prompt estilizado (`0x??? >>`).
 
-      * **Sintaxe:** `(Variavel) tem [Expressão] de vida`
-      * **Exemplo:** `(Nome) tem "Ash Ketchum" de vida`
-
-### 3.3. Entrada de Dados (Input)
-
-Para ler dados do usuário, utiliza-se a habilidade "detectar".
-
-  * **Sintaxe:** `(Variavel) Use detectar`
-  * **Exemplo:** `(Escolha) Use detectar`
+- **Sintaxe:** `(Variavel) Use detectar`
+- **Exemplo:** `(Comando) Use detectar`
 
 ### 3.4. Estruturas de Controle (Condicionais)
 
-O fluxo é controlado como uma escolha de movimentos em um turno de batalha.
-
-  * **Sintaxe (IF):**
-
-<!-- end list -->
-
-```text
-(Variavel) Escolha o movimento se (Condição)
-    ... código ...
-(Variavel) Fim da escolha
-```
-
-  * **Exemplo:**
-
-<!-- end list -->
-
-```text
-(Escolha) Escolha o movimento se (Escolha == "1")
-    (Narrador) Use cantar "Você escolheu Fogo!"
-(Escolha) Fim da escolha
-```
+- **Sintaxe (IF):**
+  ```text
+  (Variavel) Escolha o movimento se (Condição)
+      ... código ...
+  (Variavel) Fim da escolha
+  ```
 
 ### 3.5. Estruturas de Repetição (Loops)
 
 **A. Loop Padrão (While):**
-Simula o uso de um item de batalha ("Faixa").
 
 ```text
 (Contador) Equipou Faixa da escolha enquanto (Contador > 0)
@@ -98,133 +80,115 @@ Simula o uso de um item de batalha ("Faixa").
 (Contador) Fim da faixa
 ```
 
-**B. Modo Música (Loop Decrescente Especial):**
-Uma estrutura poética exclusiva para iterar contadores decrescentes (inspirado na música "99 Bottles of Beer").
-
-  * **Sintaxe:**
-
-<!-- end list -->
+**B. Modo Música (Loop Decrescente):**
+Gera efeitos visuais a cada iteração.
 
 ```text
-🎵 [Valor Inicial] ([Variavel]) na Mochila
-    ([Variavel]) na mochila... (Imprime valor atual)
-    Ash pega uma ([Variavel])... (Decrementa 1 e imprime a ação)
+🎵 [Valor] ([Variavel]) na Mochila
+    ... (corpo do loop) ...
 ```
 
-### 3.6. Funções (Evolução)
+### 3.6. Funções (Evolução / Memory Leak)
 
-Funções são declaradas como evoluções e chamadas como habilidades.
+Funções são decoradas automaticamente para simular vazamento de memória.
 
-  * **Declaração:**
+- **Declaração:**
+  ```text
+  [Pokemon] está evoluindo para [NomeDaFuncao]
+      ... código ...
+  [Pokemon] parou de evoluir
+  ```
+- **Chamada:** `[Pokemon] use a habilidade [NomeDaFuncao]!`
 
-<!-- end list -->
+### 3.7. Comandos Esotéricos (Glitches e Crashes)
 
-```text
-[Pokemon] está evoluindo para [NomeDaFuncao]
-    ... código da função ...
-[Pokemon] parou de evoluir
-```
+Comandos exclusivos para manipular a instabilidade do sistema.
 
-  * **Chamada:**
+**A. Duplicação de Item (Glitch da Ilha Cinnabar):**
+Multiplica o valor de uma variável numérica por **128** instantaneamente.
 
-<!-- end list -->
+- **Sintaxe:** `(Variavel) Usou item raro`
 
-```text
-[Pokemon] use a habilidade [NomeDaFuncao]!
-```
+**B. Induzir Crash (Bad Egg):**
+Força o encerramento do programa com um erro fatal, som de alerta e tela vermelha.
 
------
+- **Sintaxe:** `O jogo travou`
 
-## 4. Implementação Técnica (O Tradutor) 
+---
 
-O tradutor da PokéLang foi desenvolvido em **Python**. Ele funciona como um **Transpilador (Source-to-Source Compiler)**.
+## 4\. Implementação Técnica (Cinnabar Engine)
+
+O projeto vai além de uma simples tradução de texto. Ele utiliza **Injeção de Runtime**.
 
 ### Arquitetura
 
-O sistema é composto por dois arquivos principais:
+1.  **`pokelang.py` (O Compilador):**
 
-1.  **`pokelang.py` (O Motor):** Contém um dicionário de regras baseadas em **Expressões Regulares (Regex)**. Ele lê o arquivo `.poke` linha por linha, identifica padrões (como `Use cantar`) e substitui pela sintaxe Python correspondente (`print()`). Ele também gerencia a indentação automática para blocos de código.
-2.  **`pokego.py` (O Executor):** É o script principal. Utiliza a biblioteca nativa `sys` para ler o arquivo de entrada e `subprocess` para executar o código Python traduzido automaticamente, garantindo uma experiência fluida para o usuário.
+    - Lê o arquivo `.poke`.
+    - Utiliza **Regex** para traduzir a sintaxe.
+    - **Diferencial:** Injeta um cabeçalho Python robusto (aprox. 100 linhas) no início do arquivo gerado. Esse cabeçalho contém a _Cinnabar Island Memory Dump Engine_.
 
------
+2.  **A Engine (Runtime Injetado):**
 
-## 5. Códigos Exemplo 
+    - **Typewriter Effect:** Simula processador lento imprimindo caractere por caractere.
+    - **Zalgo Text:** Algoritmo probabilístico que insere caracteres aleatórios (`#`, `?`, `ERROR`) no texto de saída.
+    - **Bad Egg Handler:** Sobrescreve o `sys.excepthook` do Python. Qualquer erro (divisão por zero, sintaxe inválida ou o comando `O jogo travou`) aciona uma tela de "FATAL ERROR" personalizada e emite um som de _beep_ (`\a`).
+    - **ANSI Colors:** Todo o terminal é colorizado com tons de roxo (glitch), verde (código) e vermelho (erro).
 
-Abaixo estão os três programas obrigatórios escritos em PokéLang.
+3.  **`pokego.py` (O Executor):**
 
-### 5.1. Hello World (`ola_mundo.poke`) 
+    - Gerencia o fluxo: Chama o compilador -\> Executa o Python gerado -\> Limpa os arquivos temporários.
+
+---
+
+## 5\. Códigos Exemplo
+
+### 5.1. Hello World (`ola_mundo.poke`)
 
 ```text
 Um pokémon selvagem apareceu
-(Pikachu) Use cantar "Hello World! Pika Pika!"
+(Pikachu) Use cantar "Hello World! A memória está instável..."
 O pokémon selvagem desmaiou
 ```
 
-### 5.2. 99 Garrafas (`99-garrafas.poke`) 
+### 5.2. Teste de Glitch (`crash_test.poke`)
 
-Demonstra o "Modo Música" (Loop especializado).
-
-```text
-Um pokémon selvagem apareceu
-
-🎵 99 (Garrafas) na Mochila
-    (Garrafas) na mochila,
-    (Garrafas) pra beber!
-    Ash pega uma (Garrafas), passa pra trás!
-    (Garrafas) garrafas pra beber!
-    (Pausa) Use cantar "---"
-
-Nenhuma (Garrafas) na mochila, hora de ir pra casa...
-O pokémon selvagem desmaiou
-```
-
-### 5.3. Programa Livre: Quiz Interativo (`quiz.poke`) 
-
-Demonstra uso de Input, Condicionais, Variáveis e Funções.
+Demonstra a duplicação de itens e o erro fatal proposital.
 
 ```text
 Um pokémon selvagem apareceu
 
-# Definindo uma função
-Professor está evoluindo para Boas Vindas
-    (Prof) Use cantar "Bem-vindo ao mundo Pokémon!"
-Professor parou de evoluir
+(Ash) Use cantar "Iniciando hack do sistema..."
+(Dinheiro) tem 10 de vida
 
-# Programa Principal
-Professor use a habilidade Boas Vindas!
+(Ash) Use cantar "Dinheiro antes do glitch: " + str(Dinheiro)
+(Ash) Use cantar "Usando Item Raro no 6º slot..."
 
-(Prof) Use cantar "Qual é o seu nome?"
-(Nome) Use detectar
+# Multiplica por 128
+(Dinheiro) Usou item raro
 
-(Prof) Use cantar "Olá " + (Nome)
-(Prof) Use cantar "Escolha: (1) Charmander ou (2) Squirtle"
-(Escolha) Use detectar
+(Ash) Use cantar "Dinheiro agora: " + str(Dinheiro)
+(Ash) Use cantar "O sistema não vai aguentar..."
 
-(Escolha) Escolha o movimento se (Escolha == "1")
-    (Prof) Use cantar "Você escolheu Fogo! 🔥"
-(Escolha) Fim da escolha
+# Isso encerra o programa com tela da morte e som
+O jogo travou
 
-(Escolha) Escolha o movimento se (Escolha == "2")
-    (Prof) Use cantar "Você escolheu Água! 💧"
-(Escolha) Fim da escolha
-
+(Ash) Use cantar "Essa linha nunca será lida."
 O pokémon selvagem desmaiou
 ```
 
------
+---
 
-## 6. Como Executar 
+## 6\. Como Executar
 
-Para rodar os programas, é necessário ter o Python 3 instalado.
+⚠️ **Aviso:** Aumente o volume para ouvir os alertas de erro do sistema.
 
-1.  Coloque os arquivos `pokego.py`, `pokelang.py` e seu arquivo `.poke` na mesma pasta.
-2.  Abra o terminal ou prompt de comando.
-3.  Execute o comando abaixo passando o nome do seu arquivo:
+1.  Certifique-se de ter o Python 3 instalado.
+2.  Coloque os arquivos `pokego.py`, `pokelang.py` e seu arquivo `.poke` na mesma pasta.
+3.  Execute no terminal:
 
 <!-- end list -->
 
 ```bash
-python pokego.py 99-garrafas.poke
+python pokego.py crash_test.poke
 ```
-
-*(O script irá traduzir o código, executar o programa e limpar os arquivos temporários automaticamente).*
